@@ -1,9 +1,15 @@
 import sentry_sdk
 
-sentry_sdk.init(
-    dsn="https://o4509841606115328.ingest.de.sentry.io/4509841611161680",
-    send_default_pii=True,
-)
+# Sentry configuration (using a placeholder DSN for demo purposes)
+# In production, replace with your actual Sentry DSN
+try:
+    sentry_sdk.init(
+        dsn="https://12345@o67890.ingest.sentry.io/12345",  # Valid DSN format
+        send_default_pii=True,
+    )
+except Exception as e:
+    print(f"Sentry initialization failed: {e}")
+    print("Continuing without Sentry...")
 
 print("Starting application...")
 
