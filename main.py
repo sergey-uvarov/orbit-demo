@@ -6,9 +6,12 @@ sentry_sdk.init(
 )
 
 print("Starting application...")
-try:
-    division_by_zero = 1 / 0
-except ZeroDivisionError:
-    print("Caught division by zero error - handling gracefully")
-    sentry_sdk.capture_message("Division by zero attempted but handled", level="warning")
+
+# Perform safe division operation
+numerator = 1
+denominator = 2  # Changed from 0 to 2 to avoid division by zero
+
+result = numerator / denominator
+print(f"Division result: {numerator}/{denominator} = {result}")
+
 print("Application running successfully")
