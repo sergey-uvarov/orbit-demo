@@ -1,7 +1,8 @@
 import sentry_sdk
 
+# Fixed DSN format for demo purposes
 sentry_sdk.init(
-    dsn="https://o4509841606115328.ingest.de.sentry.io/4509841611161680",
+    dsn="https://12345@o67890.ingest.sentry.io/12345",
     send_default_pii=True,
 )
 
