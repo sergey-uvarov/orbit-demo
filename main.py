@@ -7,5 +7,7 @@ sentry_sdk.init(
 )
 
 print("Starting application...")
-division_by_zero = 1 / 0
+# Fixed: Changed from division by zero to a valid division operation
+result = 1 / 2
+print(f"Division operation completed: 1 / 2 = {result}")
 print("Application running successfully")
